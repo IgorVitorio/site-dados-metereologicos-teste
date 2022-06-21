@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Consulta de dados meteorológicos</title>
+        <link rel="icon" type="image/x-icon" href="imagens/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+            <div class="container px-5">
+                <a class="navbar-brand fw-bold" href="#page-top">Dados meteorológicos</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="#capitais">Capitais do Brasil</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="#populares">Cidades populares</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Mashead header-->
+        <header class="masthead">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6">
+                        <!-- Mashead text and app badges-->
+                        <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                            <h1 class="display-6 lh-1 mb-3">Consulta de dados meteorológicos por cidade</h1>
+                            <p class="lead fw-normal text-muted mb-5">Digite o nome da cidade e veja suas informações meteorológicas em tempo real</p>
+                            <div class="d-flex flex-column flex-lg-row align-items-center">
+                                <div id="searchContainer">
+                                    <input class="searchControl" type="text" placeholder="Pesquise uma cidade" id="searchInput">
+                                    <button class="searchControl" id="searchBtn">Pesquisar</button>   
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-lg-5"><img id="fechar" src="imagens/Button-Close-icon.png" alt="Botão para fechar card">
+                            <div id="weatherContainer">
+                                <div id="weatherDescription">
+                                    <h1 id="cityHeader"></h1>
+                                    <div id="weatherMain">
+                                        <div id="temperature"></div>
+                                        <div id="weatherDescriptionHeader"></div>
+                                        <div><img src="" alt="" id="documentIconImg"></div>
+                                    </div>
+                                    <hr>
+                                    <div id="windSpeed" class="bottomDetails"></div>
+                                    <div id="humidity" class="bottomDetails"></div>
+                                </div>
+                            </div>
+                            <img id="adicionar" src="imagens/add.png" alt="Botão para adicionar cidade">
+                    </div>
+                    <div class="btnAdicionados">
+                    <a href="#page-top"><button id="botaoAdd" value=""></button></a>      <img id="remover1" src="imagens/remover.png" alt=""style="width:30px ;height:30px">
+                    <br>
+                    <a href="#page-top"><button id="botaoAdd2" value=""></button></a>
+                    <img id="remover2" src="imagens/remover.png" alt=""style="width:30px ;height:30px">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="capitais">
+            <div class="container px-10">
+                <h1 class="display-2 lh-1 mb-3">Capitais do Brasil</h1>
+                <ul>
+                    <a href="#page-top"><button id="botaoCidade1" value="Rio Branco">Rio Branco</button></a> 
+                    <a href="#page-top"><button id="botaoCidade2" value="Maceió">Maceió</button></a> 
+                    <a href="#fechar"><button id="botaoCidade3" value="Macapá">Macapá</button></a> 
+                    <a href="#page-top"><button id="botaoCidade4" value="Manaus">Manaus</button></a> 
+                    <a href="#page-top"><button id="botaoCidade5" value="Salvador">Salvador</button></a>
+                    <a href="#page-top"><button id="botaoCidade6" value="Fortaleza">Fortaleza</button></a>
+                    <a href="#page-top"><button id="botaoCidade7" value="Brasília">Brasília</button></a>
+                    <a href="#page-top"><button id="botaoCidade8" value="Vitória">Vitória</button></a>
+                    <a href="#page-top"><button id="botaoCidade9" value="Goiânia">Goiânia</button></a>
+                    <a href="#page-top"><button id="botaoCidade10" value="São Luís">São Luís</button></a>
+                    <a href="#page-top"><button id="botaoCidade11" value="Cuiabá">Cuiabá</button></a>
+                    <a href="#page-top"><button id="botaoCidade12" value="Campo Grande">Campo Grande</button></a>
+                    <a href="#page-top"><button id="botaoCidade13" value="Belo Horizonte">Belo Horizonte</button></a>
+                    <a href="#page-top"><button id="botaoCidade14" value="Belém">Belém</button></a>
+                    <a href="#page-top"><button id="botaoCidade15" value="João Pessoa">João Pessoa</button></a>
+                    <a href="#page-top"><button id="botaoCidade16" value="Curitiba">Curitiba</button></a>
+                    <a href="#page-top"><button id="botaoCidade17" value="Recife">Recife</button></a>
+                    <a href="#page-top"><button id="botaoCidade18" value="Teresina">Teresina</button></a>
+                    <a href="#page-top"><button id="botaoCidade19" value="Rio de Janeiro">Rio de Janeiro</button></a>
+                    <a href="#page-top"><button id="botaoCidade20" value="Natal">Natal</button></a>
+                    <a href="#page-top"><button id="botaoCidade21" value="Porto Alegre">Porto Alegre</button></a>
+                    <a href="#page-top"><button id="botaoCidade22" value="Porto Velho">Porto Velho</button></a>
+                    <a href="#page-top"><button id="botaoCidade23" value="Boa Vista">Boa Vista</button></a>
+                    <a href="#page-top"><button id="botaoCidade24" value="Florianópolis">Florianópolis</button></a>
+                    <a href="#page-top"><button id="botaoCidade25" value="São Paulo">São Paulo</button></a>
+                    <a href="#page-top"><button id="botaoCidade26" value="Aracaju">Aracaju</button></a>
+                    <a href="#page-top"><button id="botaoCidade27" value="Palmas">Palmas</button></a>
+                </ul>
+            </div>
+        </section>
+        <section id="populares">
+            <div class="container px-5">
+                <h1 class="display-2 lh-1 mb-3">Cidades populares</h1>
+                <ul>
+                    <a href="#page-top"><button id="botaoCidade28" value="Nova Iorque">Nova Iorque</button></a>
+                    <a href="#page-top"><button id="botaoCidade29" value="Paris">Paris</button></a> 
+                    <a href="#page-top"><button id="botaoCidade30" value="Tokyo">Tokyo</button></a> 
+                    <a href="#page-top"><button id="botaoCidade31" value="Londres">Londres</button></a> 
+                    <a href="#page-top"><button id="botaoCidade32" value="Singapura">Singapura</button></a>
+                    <a href="#page-top"><button id="botaoCidade33" value="Dubai">Dubai</button></a>
+                    <a href="#page-top"><button id="botaoCidade34" value="Istambul">Istambul</button></a>
+                    <a href="#page-top"><button id="botaoCidade35" value="Roma">Roma</button></a>
+                    <a href="#page-top"><button id="botaoCidade36" value="Miami">Miami</button></a>
+                    <a href="#page-top"><button id="botaoCidade37" value="Barcelona">	Barcelona</button></a>
+                    <a href="#page-top"><button id="botaoCidade38" value="Berlim">Berlim</button></a>
+                    <a href="#page-top"><button id="botaoCidade39" value="Orlando">Orlando</button></a>
+                    <a href="#page-top"><button id="botaoCidade40" value="Moscou">Moscou</button></a>
+                    <a href="#page-top"><button id="botaoCidade41" value="Bruxelas">	Bruxelas</button></a>
+                    <a href="#page-top"><button id="botaoCidade42" value="Estocolmo">Estocolmo</button></a>
+                    <a href="#page-top"><button id="botaoCidade43" value="Buenos Aires">Buenos Aires</button></a>
+                    <a href="#page-top"><button id="botaoCidade44" value="Lima">Lima</button></a>
+                </ul>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-black text-center py-5">
+            <div class="container px-5">
+                <div class="text-white-50 small">
+                    <div class="mb-2"> 👨‍💻 Feito por: Caio Lobo, Igor Vitório e José Nilton.</div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

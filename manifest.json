@@ -1,0 +1,32 @@
+{
+    "short_name": "Dados metereológicos",
+    "name": "Dados metereológicos",
+    "description": "Obtenha os dados metereológicos atuais da cidade desejada",
+    "icons": [
+      {
+        "src": "favicon.ico",
+        "sizes": "64x64 32x32 24x24 16x16",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/?mode=standalone",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "scope": "https://igorvitorio.github.io/site-dados-metereologicos/",
+    "categories": [
+      "weather"
+    ],
+    "lang": "pt-BR",
+    "prefer_related_applications": true
+  }
